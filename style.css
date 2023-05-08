@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  outline: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 1rem "Poppins", sans-serif;
+  background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nsbpictures.com%2Fwp-content%2Fuploads%2F2020%2F11%2Fstar-background-1-1024x770.png&f=1&nofb=1&ipt=644a7ba02a4bdc6598497ecc40c7de3378192af15a25bbf30e0ae48120768538&ipo=images") no-repeat center/cover;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  backdrop-filter: blur(12px);
+  width: 400px;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 1rem 3rem -1.5rem rgba(0, 0, 0, 0.3);
+  gap: 1.5rem;
+}
+.app-main .day-item:nth-child(3),
+.app-main .day-item:nth-child(4),
+.app-main .day-item:nth-child(5) {
+  display: none;
+}
+.app-main img {
+  display: table;
+  margin: auto;
+}
+.app-main [data-location] {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.6rem;
+  font-size: 1em;
+  text-align: center;
+  cursor: pointer;
+}
+.app-main [data-location]:hover, .app-main [data-location]:focus {
+  background: rgba(250, 200, 130, 0.3);
+}
+.app-main [data-temperature] {
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  font-weight: 600;
+}
+.app-main [data-temperature-text] {
+  font-size: 1rem;
+}
+.app-main sup {
+  scale: 0.8;
+  font-weight: lighter;
+}
+.app-main-top {
+  display: flex;
+  flex-direction: column;
+  background: #476FB1;
+  border-radius: 0 0 200px 200px;
+  padding: 1.5rem;
+  color: #eee;
+  gap: 1rem;
+}
+.app-main-bottom {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  gap: 1.5rem;
+}
+.app-main-bottom .day-item {
+  display: block;
+  background: #eee;
+  border-radius: 0.6rem;
+  text-align: center;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+.app-main-bottom .day-item [data-temperature] {
+  font-size: 2.5rem;
+}
